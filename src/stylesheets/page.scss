@@ -1,0 +1,490 @@
+@font-face {
+  font-family: "TTFirsNeue";
+  src: url("./fonts/tt_firs_neue/TTFirsNeue-Regular.woff2") format("woff2"),
+  url("./fonts/tt_firs_neue/TTFirsNeue-Regular.woff") format("woff"),
+  url("./fonts/tt_firs_neue/TTFirsNeue-Regular.ttf") format("truetype");
+}
+
+
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: "TTFirsNeue";
+}
+
+
+
+body.index {
+
+  .time {
+    display: flex;
+    align-items: center;
+    color: #24262b86;
+
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  .tag {
+    background-color: #80808021;
+    border-radius: 10px;
+    color: black;
+    padding: 8px 35px;
+    font-size: 16px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110.42px;
+    padding: 30px;
+
+    .logo {
+      width: 37.82px;
+      height: 37.82px;
+    }
+
+    .rightBlock {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .menu ul {
+        display: flex;
+        list-style: none;
+        color: black;
+
+        li {
+          color: black;
+          cursor: pointer;
+          margin: 0 20px;
+          font-size: 18px;
+
+          a{
+            text-decoration: unset;
+            color: black;
+          }
+        }
+
+      }
+
+      .search {
+        position: relative;
+        margin-left: 200px;
+
+        svg {
+          position: absolute;
+          left: 10px;
+          top: 12px;
+          z-index: 1;
+        }
+
+        input {
+          padding: 13px 0px;
+          border-radius: 11.34px;
+          color: rgba(36, 38, 43, 0.3137254902);
+          font-size: 18px;
+          width: 190px;
+          padding-left: 54px;
+          border: unset;
+          background-color: #8890A208;
+          outline: unset;
+          &::placeholder {
+            color: #24262b50;
+          }
+        }
+      }
+    }
+
+  }
+
+  .wrapper {
+    display: flex;
+    padding: 0 80px;
+    flex-direction: column;
+
+    .Breadcrumbs {
+      display: flex;
+      align-items: center;
+
+      a {
+        color: grey;
+        margin: 0px 5px;
+        text-decoration: unset;
+
+        svg{
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .article {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      margin: 40px 0;
+    }
+
+    .article-info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      > * {
+        margin-right: 20px;
+        color: #24262b86;
+        font-size: 14px;
+      }
+
+
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+
+      font-size: 22px;
+
+      p {
+        margin: 40px 0;
+      }
+
+
+      .note {
+        box-shadow: 5px 5px 10px rgb(85 56 56 / 10%);
+        padding: 80px;
+        border-radius: 19.59px;
+      }
+
+      .BlockImages {
+        display: flex;
+
+        .img {
+          width: 100%;
+          padding: 0 10px;
+
+          img {
+            width: 100%;
+          }
+
+          span {
+            font-size: 18px;
+            color: #24262b86;
+          }
+        }
+      }
+
+      .author {
+        display: flex;
+        box-shadow: 5px 5px 10px rgb(85 56 56 / 10%);
+        padding: 80px;
+        border-radius: 19.59px;
+
+        img {
+          width: 129px;
+          height: 129px;
+        }
+
+        .author-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 40px;
+          line-height: 10px;
+
+          h2 {
+            font-size: 30px;
+          }
+
+          span {
+            font-size: 22px;
+            color: #24262b86;
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+  .Pagination{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 60px;
+    a{
+      text-decoration: unset;
+      font-size: 25px;
+      color: #949393;
+      padding: 20px 30px;
+      border-radius: 10.49px;
+      border: 1px solid transparent;
+
+      &.active{
+        color: black;
+        border: 1px solid #24262B50;
+      }
+    }
+  }
+
+  .BackMenu{
+    display:flex;
+
+    align-items: center;
+    margin-bottom: 30px;
+    a {
+      color: grey;
+      margin: 0px 5px;
+      text-decoration: unset;
+
+      svg{
+        margin-right: 10px;
+      }
+      span{
+        font-size: 24px;
+      }
+    }
+  }
+
+  .CatalogFilter{
+    .filter{
+
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row;
+
+      justify-content: space-between;
+      >div {
+        display: flex;
+        align-items: center;
+        border-radius: 100px;
+        font-weight: 600;
+        font-size: 14.99px;
+        color: #24262b;
+        padding: 10px 55px;
+        background-color: #E8E9EA;
+        svg{
+          margin-right:10px;
+        }
+        &.active,&:hover{
+          cursor: pointer;
+          color: #E8E9EA;
+          background-color: #24262B;
+
+          svg{
+            filter: invert(1);
+          }
+        }
+
+      }
+    }
+  }
+
+  .HelloAbc{
+    display:flex;
+    border: 20.38px;
+    img{
+      width: 100%;
+    }
+  }
+  .TopBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h1 {
+      font-size: 36px;
+    }
+
+    a {
+      margin-left: 20px;
+      color: grey;
+      text-decoration: unset;
+      font-size: 24px;
+    }
+  }
+
+  .Categories{
+    .CategoriesBlock{
+      display: flex;
+      flex-wrap: wrap;
+      cursor: pointer;
+
+      .cat{
+        display:flex;
+        text-decoration: unset;
+        border-radius: 14.72px;
+        flex-direction: column;
+        padding: 50px 10px;
+        flex-wrap: wrap;
+        margin: 0px 20px;
+        flex-basis: calc(33.33% - 60px);
+        justify-content: space-between;
+        align-items: center;
+
+        box-shadow: 5px 5px 10px rgb(85 56 56 / 10%);
+
+
+        .ico{
+
+        }
+        .title{
+          font-weight: 600;
+          font-size: 27.34px;
+          color: #00000060;
+        }
+      }
+    }
+  }
+
+  .RelatedArticles {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+
+
+
+    .AriclesBlock {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 10px;
+        flex-wrap: wrap;
+        flex-basis: calc(33.33% - 20px);
+        justify-content: space-between;
+        text-decoration:unset;
+
+        img {
+          width: 100%;
+        }
+
+        h3 {
+          font-size: 28.86px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          color:black;
+
+        }
+
+        .Descr {
+          font-size: 17.57px;
+          color: #24262B;
+        }
+
+        .Nav {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 25px;
+
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 80px;
+  textAlign: center;
+
+  .TopBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: initial !important;
+
+    .LeftBlock {
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        font-size: 32px;
+      }
+
+      .descr {
+        margin-top: 20px;
+        font-size: 16.49px;
+        color: grey;
+        line-height: 20px;
+      }
+
+      .CreatedAt{
+        margin-top: 80px;
+      }
+    }
+
+    .RightBlock {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      .TpBlock {
+        margin-top: 44px;
+        .CustomInput {
+          input {
+            padding: 8px;
+            max-width: 238px;
+            width: 100%;
+            margin-right: -24px;
+            outline: unset;
+            border: 1px solid grey;
+            background-color: transparent;
+            border-right: unset;
+            border-radius: 10px;
+          }
+
+          .but {
+            border-radius: 20px;
+            color: black;
+            padding: 8px 30px;
+            background-color: white;
+          }
+        }
+
+        .policy {
+          display: flex;
+          flex-direction: row;
+          margin-top: 18px;
+          align-items: center;
+
+          input {
+            width: 15px;
+            height: 15px;
+          }
+
+          label {
+            padding-left: 5px;
+            font-size: 15.79px;
+            color: grey;
+          }
+        }
+      }
+
+      .CopyRightBlock {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+
+    }
+  }
+
+}
+
+
